@@ -64,7 +64,7 @@ func (rr Registrations) SubKeys() []string {
 
 type PeerInfo struct {
 	lastUpdate       int64
-	id               string
+	id               string // ip+端口 作为id  // FIXME:RemoteAddress也是ip+端口,和id是一样的,多个id字段可能是为了当id作为key值的时候更好理解吧
 	RemoteAddress    string `json:"remote_address"`
 	Hostname         string `json:"hostname"`
 	BroadcastAddress string `json:"broadcast_address"`
